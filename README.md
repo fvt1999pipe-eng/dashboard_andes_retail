@@ -6,6 +6,10 @@ Dashboard en Power BI que explica por qué cayeron los ingresos de una cadena de
 
 [Documentación completa del proyecto](documentacion.md) · [Descargar el dashboard (.pbix)](dashboard_andes_retail.pbix)
 
+## Contexto y objetivo
+
+La dirección de Andes Retail vio caer los ingresos de 2025 y necesitaba entender la causa antes de ajustar su plan comercial. El objetivo es un dashboard de dos vistas: una que muestre qué pasó y otra que explique por qué, con una narrativa que lleve de los datos a la decisión.
+
 ## Preguntas de negocio
 
 1. **Vista Overview:** ¿cómo evolucionó el ingreso total entre 2024 y 2025?
@@ -21,6 +25,18 @@ Dashboard en Power BI que explica por qué cayeron los ingresos de una cadena de
 
 *Vista Detalle. Premium es el único segmento que retrocede, la caída no depende de una categoría y ocurre en verano; el margen se mantiene cerca de 35 % en todas las regiones.*
 
+## KPIs
+
+| KPI | Definición |
+|---|---|
+| Ingresos | Suma de `Ingresos` |
+| Ganancia | Ingresos menos costo |
+| Margen % | Ganancia sobre ingresos |
+| Pedidos | Conteo de pedidos |
+| Clientes únicos | Conteo distinto de `ID_Cliente` |
+| Ticket promedio | Ingresos entre pedidos |
+| Var % Ingresos | Ingresos frente al año anterior |
+
 ## Hallazgos
 
 | Vista | Hallazgo |
@@ -33,6 +49,12 @@ Dashboard en Power BI que explica por qué cayeron los ingresos de una cadena de
 1. Lanzar una campaña dirigida a clientes Premium antes y durante el verano (diciembre a febrero).
 2. Crear un programa de fidelización: casi ningún cliente repite compra (3.821 clientes en 5.000 pedidos).
 3. Priorizar Perú, donde se concentra la mayor parte de la caída.
+
+### Limitaciones
+
+- El dataset no tiene precios de la competencia, inversión en marketing ni inventario, así que el dashboard ubica la caída (Premium, verano, Perú) pero no prueba su causa.
+- Cubre dos años: no permite saber si 2024 fue un año atípicamente alto.
+- La estación viene definida en los datos; en Colombia no hay estaciones, por lo que esa lectura aplica sobre todo a Perú y Chile.
 
 ## Cómo se construyó
 
@@ -53,7 +75,7 @@ dashboard_andes_retail/
 └── README.md
 ```
 
-Para explorar el dashboard, descarga el archivo `.pbix` y ábrelo con Power BI Desktop. Los datos son un caso de estudio del bootcamp de Análisis de Datos de TripleTen.
+Para explorar el dashboard, descarga el archivo `.pbix` y ábrelo con Power BI Desktop. Los datos son un caso de estudio ficticio del bootcamp de Análisis de Datos de TripleTen: no corresponden a una empresa real.
 
 ## Herramientas
 
